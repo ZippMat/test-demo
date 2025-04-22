@@ -1,0 +1,8 @@
+
+.env
+
+
+.mypy_cache/
+
+.test/
+__pycache__/
