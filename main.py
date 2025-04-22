@@ -18,7 +18,7 @@ async def get_db():
 
 @app.get("/")
 async def root():
-    return {"message": "Hello World V2"}
+    return {"message": "Hello World V3"}
 
 
 @app.get("/health")
