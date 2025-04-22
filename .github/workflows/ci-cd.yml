@@ -43,3 +43,10 @@ jobs:
           --platform linux/arm64 \
           -t $ECR_URI:$IMAGE_TAG \
           --push .
+
+      - name: Force ECS service deployment
+        run: |
+          aws ecs update-service \
+            --cluster ${{ secrets.ECS_CLUSTER }} \
+            --service ${{ secrets.ECS_SERVICE }} \
+            --force-new-deployment
